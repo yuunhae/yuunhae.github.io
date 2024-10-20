@@ -19,13 +19,14 @@
   @include breakpoint($large) {
     float: inline-start;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
-    opacity: 0.75;
+    opacity: 1; // 0.75 -> 1
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
 
-    &:hover {
-      opacity: 1;
-    }
+    //hover 시 사이드바 밝아지는 효과 끄기 
+    // &:hover {
+    //   opacity: 1;
+    // } 
 
     &.sticky {
       overflow-y: auto;
@@ -126,6 +127,7 @@
   vertical-align: top;
   width: 36px;
   height: 36px;
+  margin-bottom: 1em;
 
   @include breakpoint($large) {
     display: block;
@@ -135,11 +137,14 @@
 
   img {
     max-width: 110px;
+    max-height: 110px;
+    height: 110px;
+    width: 110px;
     border-radius: 50%;
 
     @include breakpoint($large) {
       padding: 5px;
-      border: 1px solid $border-color;
+      border: 1px solid #151D6A;
     }
   }
 }
@@ -157,14 +162,14 @@
   }
 
   a {
-    color: inherit;
+    color: #000;
     text-decoration: none;
   }
 }
 
 .author__name {
   margin: 0;
-
+  
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -211,6 +216,8 @@
   button {
     position: relative;
     margin-bottom: 0;
+    border: 1px solid #151D6A;
+    color: #151D6A;
 
     &:before {
       @supports (pointer-events: none) {
@@ -298,7 +305,7 @@
   }
 
   ul {
-    padding: 10px;
+    padding: 0px;
     list-style-type: none;
   }
 

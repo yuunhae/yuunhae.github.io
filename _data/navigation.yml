@@ -1,12 +1,28 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Home"
+    url: https://yuunhae.github.io
+
+  - title: "About Me"
+    url: /about/
+
+  - title: "시리즈"
+    url: /series/
+
+
+sidebar-category:
+  - title: "💙 CS"
+    children:
+      - title: "컴퓨터 구조"
+        url: "cs/architecture/"
+      - title: "운영체제"
+        url: "cs/operating-system/"
+      - title: "컴퓨터 네트워크"
+        url: "cs/network/"
+      - title: "데이터테이스"
+        url: "cs/database/"
+
+  - title: "💙 Github blog"
+    children:
+      - title: "로그"
+        url: "github-blog/log/"

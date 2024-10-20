@@ -334,9 +334,9 @@ body {
 
 .page__taxonomy-item {
   display: inline-block;
-  margin-inline-end: 5px;
-  margin-bottom: 8px;
-  padding: 5px 10px;
+  // margin-inline-end: 5px;
+  margin-bottom: 3px;
+  padding: 1px 3px;
   text-decoration: none;
   border: 1px solid mix(#000, $border-color, 25%);
   border-radius: $border-radius;

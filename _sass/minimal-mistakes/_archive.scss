@@ -21,10 +21,22 @@
 .archive__item {
   position: relative;
 
+
   a {
     position: relative;
     z-index: 10;
+    color: #000;  
+    text-decoration: none;
+
+    &:hover {
+      text-shadow: rgba(21, 29, 106, 0.27) 1px 0 5px;
+    }
+
   }
+  a:visited {
+    color: #000;
+  }
+
 
   a[rel="permalink"] {
     position: static;
@@ -35,8 +47,8 @@
   margin: 1.414em 0 0.5em;
   padding-bottom: 0.5em;
   font-size: $type-size-5;
-  color: $muted-text-color;
-  border-bottom: 1px solid $border-color;
+  color: #151D6A;
+   border-bottom: 1px solid #151D6A;
 
   + .list__item .archive__item-title {
     margin-top: 0.5em;

@@ -127,12 +127,14 @@
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: $muted-text-color;
-    border: 1px solid mix(#000, $border-color, 25%);
+    color: red;
+    border: 1px solid #151D6A;
     border-radius: $border-radius;
 
     &:hover {
-      @include yiq-contrasted($muted-text-color);
+      // @include yiq-contrasted($muted-text-color);
+      color: #fff;
+      background-color: #151D6A;
     }
 
     &:first-child {
@@ -448,6 +450,10 @@
     margin-inline-start: -0.5em;
     padding-inline: 0.5em;
     font-weight: bold;
+  }
+
+  span {
+    margin-top: 20px;
   }
 
   @include breakpoint(max-width $large - 1px) {
