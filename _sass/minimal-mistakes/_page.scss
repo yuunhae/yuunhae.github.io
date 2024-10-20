@@ -4,7 +4,7 @@
 
 #main {
   @include clearfix;
-  margin-inline: auto;
+  // margin-inline: auto;
   padding-inline: 1em;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -28,10 +28,6 @@ body {
           flex-direction: column;
 }
 
-.initial-content,
-.search-content {
-  flex: 1 0 auto;
-}
 
 .page {
   @include breakpoint($large) {
