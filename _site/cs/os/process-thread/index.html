@@ -1,0 +1,663 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="ko-KR" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[운영체제] 1.운영체제 - Yundal</title>
+<meta name="description" content="GitHub Blog를 만들어보았다.">
+
+
+  <meta name="author" content="Yundal">
+  
+  <meta property="article:author" content="Yundal">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Yundal">
+<meta property="og:title" content="[운영체제] 1.운영체제">
+<meta property="og:url" content="http://localhost:4000/cs/os/process-thread/">
+
+
+  <meta property="og:description" content="GitHub Blog를 만들어보았다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-10-24T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/cs/os/process-thread/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Yundal Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Yundal
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="https://yuunhae.github.io"
+                
+                
+              >Home</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About Me</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/series/"
+                
+                
+              >시리즈</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/waves.jpeg" alt="Yundal" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Yundal</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>파란색과 바다를 좋아하는 개발자 꿈나무 입니다. 🌊</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:susu12356@email.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://yuunhae.github.io/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/yuunhae" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:susu12356@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="susu12356@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+    <li>
+      <!-- <span> Total Posts : 3</style> -->
+    </li>
+  </ul>
+</nav>
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">CS</span>
+        
+
+        
+        <ul>
+          
+          
+          
+          
+          
+
+            <li><a href="/cs/architecture/">컴퓨터 구조(0)</a></li>
+          
+          
+          
+          
+          
+
+            <li><a href="/cs/operating-system/">운영체제(0)</a></li>
+          
+          
+          
+          
+          
+
+            <li><a href="/cs/network/">컴퓨터 네트워크(0)</a></li>
+          
+          
+          
+          
+          
+
+            <li><a href="/cs/database/">데이터테이스(0)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Github blog</span>
+        
+
+        
+        <ul>
+          
+          
+          
+          
+          
+
+            <li><a href="/github-blog/log/">로그(0)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[운영체제] 1.운영체제">
+    <meta itemprop="description" content="GitHub Blog를 만들어보았다.">
+    <meta itemprop="datePublished" content="2024-10-24T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/cs/os/process-thread/" itemprop="url">[운영체제] 1.운영체제
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> index</h4></header>
+              <ul class="toc__menu"><li><a href="#프로세스">프로세스</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h3 id="프로세스">프로세스</h3>
+
+<p>: 메모리에 적재되어 실행중인 프로그램(일, task)이다.</p>
+
+<ul>
+  <li>
+    <p>각각의 프로세스는 독립된 메모리 공간을 가지며 , 다른 프로세스와 메모리 공간을 공유하지 않는다.</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>프로그램</td>
+          <td>보조기억장치(SSD, 하드디스크)에 존재하는 실행되기를 기다리는 명령(코드)과 정적인 데이터의 묶음, 쉽게 말하면 코드가 작성되어 있는 파일</td>
+        </tr>
+        <tr>
+          <td>프로세스</td>
+          <td>실행중인 프로그램</td>
+        </tr>
+        <tr>
+          <td>프로세서</td>
+          <td>명령어를 실행하는 장치 ex)CPU</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>### <strong>프로그램이 프로세스가 되는 과정</strong></p>
+
+    <ol>
+      <li>
+        <p>메모리에 프로세스가 필요로 하는 <strong>재료</strong>들이 올라가야 한다.</p>
+
+        <p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/da29a764-c3f4-4c2d-a877-3d3f432b361e/1706b9bf-20cd-481a-ae7d-44b8c6ee7d40/5c99876a-d21b-4d45-a311-204cffe243c5.png" alt="프로세스 메모리 구조" /></p>
+
+        <p>프로세스 메모리 구조</p>
+
+        <ul>
+          <li>Stack 영역 [동적]
+            <ul>
+              <li>함수 호출과 관계되는 지역변수, 매개변수 등을 저장한다.</li>
+              <li>함수 호출 시 생성되고 함수가 끝날 시에 반환한다.</li>
+            </ul>
+          </li>
+          <li>Heap 영역 [동적]
+            <ul>
+              <li>프로그램 실핼 중에 필요에 의해 메모리를 동적으로 할당하는 영역이다.</li>
+              <li>Heap에 할당된 메모리 블록은 프로그램이 직접 접근할 수 있는 변수 이름을 가지지 않는다. 예를 들어, <strong>전역 변수</strong>나 <strong>지역 변수</strong>처럼 특정 이름으로 직접 참조되지 않는다. 따라서 <strong>Heap 메모리에 접근</strong>하기 위해서는 <strong>해당 메모리의 주소 값</strong>이 필요하다. 주소 값에 의해서만 참조되고 사용되는 영역이다.</li>
+            </ul>
+          </li>
+          <li>Data 영역
+            <ul>
+              <li>
+                <p>프로그램의 실행과 종료 과정에서 발생한 전역변수와 static 변수, 배열 등을 저장한다.</p>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>BSS(Block Started by Symbol) 영역</th>
+                      <th><strong>초기화되지 않은 전역 변수</strong>와 <strong>static 변수</strong>가 저장 <code class="language-plaintext highlighter-rouge">int a</code>;</th>
+                      <th>프로그램이 시작될 때 자동으로 0으로 초기화 된다.</th>
+                      <th>RAM에 저장</th>
+                      <th>-</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>GVAR 영역</td>
+                      <td><strong>초기화된 전역 변수</strong>와 <strong>static 변수</strong> <code class="language-plaintext highlighter-rouge">int a = 10;</code></td>
+                      <td>프로그램 시작 시 초기 값이 필요하기 때문에 초기 값을 ROM에 저장하고 실행중에는 RAM에 로드된다.</td>
+                      <td>ROM에 저장</td>
+                      <td>초기 값을 기록해야 되므로 BSS보다 상대적으로 큰 공간을 차지한다.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p><strong>BSS와 GVAR(Data) 구분의 이유</strong></p>
+
+                <p><strong>메모리 파일 크기의 효율성 때문이다.</strong></p>
+
+                <p><strong>BSS 영역은</strong> 초기화 되지 않은 변수를 0으로 초기화 할 뿐 이기에 ROM에 저장되지 않고, 실행시점에 RAM에 메모리만 할당해주면 된다.</p>
+
+                <p>반면, GVAR 영역은 초기 값을 기록해야 하기에 ROM에 저장하고, 프로그램이 실행될 때 RAM에 로드해야 한다.</p>
+
+                <p>여기서 초기화 되지 않은 데이터 까지 모두 ROM에 저장한다면, 프로그램의 크기가 커질 것이다.</p>
+              </li>
+            </ul>
+          </li>
+          <li>Text/Code 영역
+            <ul>
+              <li>실행 명령을 포함하는 코드들이 들어가는 부분으로 컴파일한 프로그램(기계어)가 저장된다.</li>
+              <li>읽기 전용이다 .</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#cs" class="page__taxonomy-item p-category" rel="tag">cs</a><span class="sep">, </span>
+    
+      <a href="/categories/#os" class="page__taxonomy-item p-category" rel="tag">os</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-10-24T00:00:00+09:00">October 24, 2024</time></p>
+
+      </footer>
+
+      <!-- <section class="page__share">
+  <h4 class="page__share-title">공유하기</h4>
+
+  <a href="https://twitter.com/intent/tweet?text=%5B%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%5D+1.%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%20http%3A%2F%2Flocalhost%3A4000%2Fcs%2Fos%2Fprocess-thread%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcs%2Fos%2Fprocess-thread%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cs/os/process-thread/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/cs/architecture/computer-system/" class="pagination--pager" title="[컴퓨터구조] 1.컴퓨터의 구성
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">참고</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/cs/architecture/computer-system/" rel="permalink">[컴퓨터구조] 1.컴퓨터의 구성
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">GitHub Blog를 만들어보았다.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/github-blog/log/first-post/" rel="permalink">[Minimal-Mistakes] github 블로그 만들기
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">GitHub Blog를 만들어보았다.
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/yuunhae" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">Yundal</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

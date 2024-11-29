@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Default skin
+   ========================================================================== */
+
+// Intentionally left blank
+
+.initial-content, .search-content {
+   flex: 0 1 auto;
+}
+.greedy-nav .site-title {
+   font-size: 1rem;
+}
+
+.greedy-nav .site-title,
+.masthead,
+.masthead nav,
+.visible-links .masthead__menu-item a{
+   background-color: #151D6A;
+   color: #fff;
+   font-weight: bold;
+ }
+
+#footer{
+   color: #fff;
+   background-color: #151D6A;
+}
+
+.archive__subtitle{
+   border-bottom: 1px solid #151D6A;
+   margin-left: 0;
+}
+
+.nav__list .nav__items span{
+   font-size: .75rem;
+}
+
+.masthead__menu-item,
+.author__urls li {
+   font-style: italic;
+   font-size: 1rem;
+   
+}
+
+.page__meta .page__taxonomy strong {
+   margin-inline-end: 1px;
+}
+
+.pagination .pagination--pager {
+   color: #151D6A;
+}
