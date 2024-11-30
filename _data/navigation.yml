@@ -6,8 +6,8 @@ main:
   - title: "About Me"
     url: /about/
 
-  - title: "시리즈"
-    url: /series/
+  - title: "Posts"
+    url: /posts/
 
 
 sidebar-category:

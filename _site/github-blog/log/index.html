@@ -1,12 +1,11 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
-  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-
-<html lang="ko-KR" class="no-js">
+<html lang="ko" class="no-js">
   <head>
     <meta charset="utf-8">
 
@@ -80,9 +79,25 @@
 
 <!-- end custom head snippets -->
 
+    
+    
+ 
+    <!-- 스크롤바 커스터마이징 -->
+    <style> 
+      ::-webkit-scrollbar{width: 16px;}
+      ::-webkit-scrollbar-thumb {background-color:#5e6265; border-radius: 16px;}
+      ::-webkit-scrollbar-thumb:hover {background: #7db578;}
+      ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment 
+  
+      {
+        width:12px;height:12px;background:transparent;
+      } 
+
+    </style>
+
   </head>
 
-  <body class="layout--category" dir="ltr">
+  <body class="layout--category">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -102,25 +117,17 @@
           Yundal
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="https://yuunhae.github.io"
-                
-                
-              >Home</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >About Me</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >시리즈</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="https://yuunhae.github.io">Home</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">About Me</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Posts</a>
+            </li>
+</ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">토글 메뉴</span>
@@ -160,7 +167,8 @@
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>파란색과 바다를 좋아하는 개발자 꿈나무 입니다. 🌊</p>
+        <p>파란색 좋아하는
+프론트엔드 개발자 꿈나무 💭</p>
 
       </div>
     
@@ -202,7 +210,7 @@
       
         <li>
           <a href="mailto:susu12356@gmail.com" rel="me" class="u-email">
-            <meta itemprop="email" content="susu12356@gmail.com" />
+            <meta itemprop="email" content="susu12356@gmail.com">
             <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
           </a>
         </li>
@@ -256,7 +264,7 @@
 
 <nav class="nav__list">
   
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
   <label for="ac-toc">토글 메뉴</label>
   <ul class="nav__items">
     
@@ -286,7 +294,7 @@
 
 <nav class="nav__list">
   
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
   <label for="ac-toc">토글 메뉴</label>
   <ul class="nav__items">
     
@@ -389,10 +397,23 @@
   </div>
 </div>
 
-      
     </div>
 
     
+
+    <!--사이드바 위, 아래, 홈버튼 기능 추가-->
+    <!-- <aside class="sidebar__top">
+      <a href="#site-nav"> <i class="fas fa-angle-double-up fa-2x"></i> </a>
+    </aside>
+
+    <aside class="sidebar__bottom">
+      <a href="#footer"> <i class="fa fa-angle-double-down fa-2x"></i> </a>
+    </aside> -->
+
+    <!-- 라이트모드 토글 추가 -->
+    <!-- <aside class= "dark__toggle">
+      
+    </aside> -->
 
     <div id="footer" class="page__footer">
       <footer>
@@ -429,13 +450,14 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">Yundal</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2024 <a href="http://localhost:4000">Yundal</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/assets/js/main.min.js"></script>
+
 
 
 

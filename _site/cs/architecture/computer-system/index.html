@@ -1,12 +1,11 @@
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
-  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-
-<html lang="ko-KR" class="no-js">
+<html lang="ko" class="no-js">
   <head>
     <meta charset="utf-8">
 
@@ -30,6 +29,8 @@
   <meta property="og:description" content="GitHub Blog를 만들어보았다.">
 
 
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/main/blogIntro.svg">
 
 
 
@@ -84,9 +85,25 @@
 
 <!-- end custom head snippets -->
 
+    
+    
+ 
+    <!-- 스크롤바 커스터마이징 -->
+    <style> 
+      ::-webkit-scrollbar{width: 16px;}
+      ::-webkit-scrollbar-thumb {background-color:#5e6265; border-radius: 16px;}
+      ::-webkit-scrollbar-thumb:hover {background: #7db578;}
+      ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment 
+  
+      {
+        width:12px;height:12px;background:transparent;
+      } 
+
+    </style>
+
   </head>
 
-  <body class="layout--single" dir="ltr">
+  <body class="layout--single">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -106,25 +123,17 @@
           Yundal
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="https://yuunhae.github.io"
-                
-                
-              >Home</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >About Me</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >시리즈</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="https://yuunhae.github.io">Home</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">About Me</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Posts</a>
+            </li>
+</ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">토글 메뉴</span>
@@ -166,7 +175,8 @@
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>파란색과 바다를 좋아하는 개발자 꿈나무 입니다. 🌊</p>
+        <p>파란색 좋아하는
+프론트엔드 개발자 꿈나무 💭</p>
 
       </div>
     
@@ -208,7 +218,7 @@
       
         <li>
           <a href="mailto:susu12356@gmail.com" rel="me" class="u-email">
-            <meta itemprop="email" content="susu12356@gmail.com" />
+            <meta itemprop="email" content="susu12356@gmail.com">
             <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
           </a>
         </li>
@@ -262,7 +272,7 @@
 
 <nav class="nav__list">
   
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
   <label for="ac-toc">토글 메뉴</label>
   <ul class="nav__items">
     
@@ -287,7 +297,7 @@
 
 <nav class="nav__list">
   
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
   <label for="ac-toc">토글 메뉴</label>
   <ul class="nav__items">
     
@@ -381,8 +391,43 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> index</h4></header>
-              <ul class="toc__menu"><li><a href="#컴퓨터-시스템">컴퓨터 시스템</a><ul><li><a href="#하드웨어hardware">하드웨어(hardware)</a><ul><li><a href="#하드웨어-구성요소">하드웨어 구성요소</a><ul><li><a href="#cpucentral-processing-unit란">CPU(Central Processing Unit)란?</a><ul><li><a href="#cpu-기술의-발전">CPU 기술의 발전</a></li><li><a href="#cpu의-구성요소">CPU의 구성요소</a></li></ul></li><li><a href="#주기억장치란main-memory란">주기억장치란(Main Memory)란?</a><ul><li><a href="#ramrandom-access-memory">RAM(Random Access Memory)</a></li><li><a href="#romread-only-memory">ROM(Read Only Memory</a></li></ul></li><li><a href="#보조-기억장치secondary-memory란">보조 기억장치(Secondary Memory)란?</a></li><li><a href="#입출력장치란">입출력장치란?</a></li></ul></li><li><a href="#단위">단위</a></li></ul></li><li><a href="#소프트웨어">소프트웨어</a><ul><li><a href="#시스템-소프트웨어-system-software">시스템 소프트웨어 (System Software)</a></li><li><a href="#응용-소프트웨어-application-software">응용 소프트웨어 (Application Software)</a></li><li><a href="#미들웨어-middleware">미들웨어 (Middleware)</a></li></ul></li><li><a href="#펌웨어">펌웨어</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> index</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#%EC%BB%B4%ED%93%A8%ED%84%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C">컴퓨터 시스템</a><ul>
+<li>
+<a href="#%ED%95%98%EB%93%9C%EC%9B%A8%EC%96%B4hardware">하드웨어(hardware)</a><ul>
+<li>
+<a href="#%ED%95%98%EB%93%9C%EC%9B%A8%EC%96%B4-%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C">하드웨어 구성요소</a><ul>
+<li>
+<a href="#cpucentral-processing-unit%EB%9E%80">CPU(Central Processing Unit)란?</a><ul>
+<li><a href="#cpu-%EA%B8%B0%EC%88%A0%EC%9D%98-%EB%B0%9C%EC%A0%84">CPU 기술의 발전</a></li>
+<li><a href="#cpu%EC%9D%98-%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C">CPU의 구성요소</a></li>
+</ul>
+</li>
+<li>
+<a href="#%EC%A3%BC%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98%EB%9E%80main-memory%EB%9E%80">주기억장치란(Main Memory)란?</a><ul>
+<li><a href="#ramrandom-access-memory">RAM(Random Access Memory)</a></li>
+<li><a href="#romread-only-memory">ROM(Read Only Memory</a></li>
+</ul>
+</li>
+<li><a href="#%EB%B3%B4%EC%A1%B0-%EA%B8%B0%EC%96%B5%EC%9E%A5%EC%B9%98secondary-memory%EB%9E%80">보조 기억장치(Secondary Memory)란?</a></li>
+<li><a href="#%EC%9E%85%EC%B6%9C%EB%A0%A5%EC%9E%A5%EC%B9%98%EB%9E%80">입출력장치란?</a></li>
+</ul>
+</li>
+<li><a href="#%EB%8B%A8%EC%9C%84">단위</a></li>
+</ul>
+</li>
+<li>
+<a href="#%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4">소프트웨어</a><ul>
+<li><a href="#%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-system-software">시스템 소프트웨어 (System Software)</a></li>
+<li><a href="#%EC%9D%91%EC%9A%A9-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-application-software">응용 소프트웨어 (Application Software)</a></li>
+<li><a href="#%EB%AF%B8%EB%93%A4%EC%9B%A8%EC%96%B4-middleware">미들웨어 (Middleware)</a></li>
+</ul>
+</li>
+<li><a href="#%ED%8E%8C%EC%9B%A8%EC%96%B4">펌웨어</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
@@ -397,17 +442,17 @@
 </ul>
 
 <h3 id="하드웨어hardware"><strong>하드웨어(hardware)</strong></h3>
-<hr />
+<hr>
 <p>전기적인 신호로 구성된 정보 즉, 데이터를 이동하거나 처리하는 물리적인 실체를 의미한다.</p>
 
 <ul>
   <li>외관과 용도 막론하고 컴퓨터를 이루는 핵심 부품은 크게 다르지 않다. 주로 CPU, 기억장치, 주변장치(CPU와 메모리를 제외한 나머지)로 구성된다. 각 구성요소들은 시스템 버스로 연결되어 있으며, 하드웨터의 품질은 컴퓨터의 정보 처리 능력을 결정한다.</li>
 </ul>
 
-<p><img src="/assets/images/ca-01-1.png" alt="ca-01-1" /></p>
+<p><img src="/assets/images/post/ca-01-1.png" alt="ca-01-1"></p>
 
 <h4 id="하드웨어-구성요소">하드웨어 구성요소</h4>
-<hr />
+<hr>
 <h5 id="cpucentral-processing-unit란">CPU(Central Processing Unit)란?</h5>
 
 <p>: 모든 컴퓨팅 장치의 두뇌 역할을 한다. 운영체제 및 애플리케이션을 시행하는데 필요한 모든 컴퓨팅 작업을 처리한다. CPU는 메모리에서 명령을 가져와 필요한 작업을 수행한 다음 출력을 다시 메모리로 보낸다.</p>
@@ -419,7 +464,7 @@
       <li>
         <p>전체 CPU를 단일 IC칩에 결합하여 컴퓨터의 접근성을 높였고, 이는 개인용 컴퓨터의 개발로 이어졌다.</p>
 
-        <p>→ 과거에는 CPU가 여러 개의 부품으로 나누어져서 작동했다. 마이크로프로세서 기술이 발전하면서, 이런 역할을 모두 하나의 작은 칩(IC) 안에 넣을 수 있게 되었다. <br />
+        <p>→ 과거에는 CPU가 여러 개의 부품으로 나누어져서 작동했다. 마이크로프로세서 기술이 발전하면서, 이런 역할을 모두 하나의 작은 칩(IC) 안에 넣을 수 있게 되었다. <br>
   결과적으로 컴퓨터가  작아지면서 책상에 올려놓을 수 있는 크기의 개인용 컴퓨터를 개발할 수 았었다. 1970년대 후반과 1980년대 초반에 등장한 Apple II나 IBM PC 같은 초기 개인용 컴퓨터의 출현으로 이어졌다.</p>
       </li>
     </ul>
@@ -448,17 +493,17 @@
 
         <p><strong>4️. 결과 저장</strong> : 실행 결과를 다시 메모리에 저장하거나 다음 작업으로 넘긴가.  </p>
 
-        <p>→ 이 과정들을 지휘한다고 보면된다. <br /><br /></p>
+        <p>→ 이 과정들을 지휘한다고 보면된다. <br><br></p>
       </li>
       <li>
         <p>클럭 신호를 받아 그 신호에 맞춰 명령어 처리의 각 단계를 <strong>동기화</strong> 한다.</p>
 
-        <p class="notice--info"><strong>클럭신호</strong><br />
-  CPU 안에서 일정한 속도로 반복적으로 발생하는 전기적 신호이다.  시계가 ‘틱, 톡’하는 것처럼,  “틱틱”하는 리듬을 일정한 간격으로 제공하면서 컴퓨터가 작업을 언제 시작하고, 언제 끝낼지를 알려주는 역할을 한다.<br /><br />
+        <p class="notice--info"><strong>클럭신호</strong><br>
+  CPU 안에서 일정한 속도로 반복적으로 발생하는 전기적 신호이다.  시계가 ‘틱, 톡’하는 것처럼,  “틱틱”하는 리듬을 일정한 간격으로 제공하면서 컴퓨터가 작업을 언제 시작하고, 언제 끝낼지를 알려주는 역할을 한다.<br><br>
   컴퓨터는 위에 말한 4가지 과정을 거쳐 명령을 처리하는데, 제어장치는 그 단계들이 클럭 신호에 맞춰 정확한 순서로 실행되도록 조율하는 역할을 한다. 
-  예를 들어, 클럭 신호가 ‘틱’ 할 때 명령어를 가져오고, ‘톡’ 할 때 그 명령어를 해석한다. <br /><br />
-  클럭의 속도<br />
-      ◦ 클럭 신호의 속도는 주파수로 표현되는데, 주파수는 1초에 클럭이 몇 번 진동하는지를 나타낸다. 이를 헤르츠(Hz)단위로 측정하며,  CPU에서 실행할 수 있는 초당 명령 수를 결정한다. 1GHz 는 1초에 10억번의 클럭 사이클이 발생한다는 의미이다.<br /><br />
+  예를 들어, 클럭 신호가 ‘틱’ 할 때 명령어를 가져오고, ‘톡’ 할 때 그 명령어를 해석한다. <br><br>
+  클럭의 속도<br>
+      ◦ 클럭 신호의 속도는 주파수로 표현되는데, 주파수는 1초에 클럭이 몇 번 진동하는지를 나타낸다. 이를 헤르츠(Hz)단위로 측정하며,  CPU에서 실행할 수 있는 초당 명령 수를 결정한다. 1GHz 는 1초에 10억번의 클럭 사이클이 발생한다는 의미이다.<br><br>
       ◦ 주파수가 높을수록, 클럭 신호의 속도가 빠르다는 의미이며, 이는 더 많은 명령을 빠르게 처리할 수 있다.</p>
       </li>
     </ul>
@@ -475,7 +520,8 @@
       </li>
       <li>비트연산
         <ul>
-          <li>두 값의 이진수 형태를 비교한다.<br /><br /></li>
+          <li>두 값의 이진수 형태를 비교한다.<br><br>
+</li>
         </ul>
       </li>
     </ul>
@@ -504,7 +550,8 @@
           <li>데이터 레지스터 :  연산장치가 연산을 수행할 때 필요한 숫자나 정보를 저장한다.</li>
           <li>명령어 레지스터(IR, Instructioin Register) : 현재 실행 중인 명령어를 저장한다. CPU는 IR에서 명령을 읽고 해석한다.</li>
           <li>주소 레지스터(MAR, Memory Address Register) : 메모리에서 데이터을 읽어오거나 데이터를 쓸(write) 때, 해당 메모리의 주소를 저장한다.</li>
-          <li>누산기(ACC, Accumulator) : 특수 레지스터로 연산장치가 계산을 끝낸 결과를 누산기에 저장한다.<br /><br /></li>
+          <li>누산기(ACC, Accumulator) : 특수 레지스터로 연산장치가 계산을 끝낸 결과를 누산기에 저장한다.<br><br>
+</li>
         </ul>
       </li>
     </ul>
@@ -512,7 +559,7 @@
   <li>
     <p>CPU 내부 버스</p>
 
-    <p><img src="/assets/images/ca-01-2.png" alt="ca-01-2" /></p>
+    <p><img src="/assets/images/post/ca-01-2.png" alt="ca-01-2"></p>
 
     <p>CPU 내부에서 데이터를 주고 받는 연결통로이다. 즉, CPU 내부의 여러 부품들이 서로 <strong>소통</strong>할 수 있게 해주는 고속 통신로이다. 실제로는 여러 개의 전성 또는 회로로 이루어져있다. 버스가 얼마나 빠르게 데이터를 전달할 수 있느냐에 따라 CPU 처리속도가 결정된다.</p>
 
@@ -529,7 +576,7 @@
 </ul>
 
 <h5 id="주기억장치란main-memory란">주기억장치란(Main Memory)란?</h5>
-<hr />
+<hr>
 <p>: 데이터를 저장하고 필요한 정보를 CPU가 빠르게 접근할 수 있도록 해주는 장치로 크게 RAM(Random Access Memory)과 ROM(Read Only Memory)이 있다. 메모리라는 용어는 보통 RAM를 지칭한다.</p>
 
 <h6 id="ramrandom-access-memory">RAM(Random Access Memory)</h6>
@@ -543,10 +590,10 @@
 
 <h6 id="romread-only-memory">ROM(Read Only Memory</h6>
 
-<p>: 비휘발성 메모리로, 컴퓨터가 부팅될 때 필요한 기본적인 시스템 정보를 저장하는 장치이다.<br /><br /></p>
+<p>: 비휘발성 메모리로, 컴퓨터가 부팅될 때 필요한 기본적인 시스템 정보를 저장하는 장치이다.<br><br></p>
 
 <h5 id="보조-기억장치secondary-memory란">보조 기억장치(Secondary Memory)란?</h5>
-<hr />
+<hr>
 <p>: 앞서 언급한 주기억장치는 휘발성 메모리로 전원이 꺼지면, 데이터가 사라지고. 가격이 비싸기에 용량이 작다. 이를 보완하여 용량이 크고, 비휘발성인 저장 장치를 만들었는데, 이를 보조기억장치라고 한다.</p>
 
 <ul>
@@ -554,7 +601,8 @@
     <ul>
       <li>하드디스크</li>
       <li>SSD</li>
-      <li>CD-ROM<br /><br /></li>
+      <li>CD-ROM<br><br>
+</li>
     </ul>
   </li>
 </ul>
@@ -570,13 +618,14 @@
       <li>스피커</li>
       <li>프린터</li>
       <li>마우스</li>
-      <li>키보드<br /></li>
+      <li>키보드<br>
+</li>
     </ul>
   </li>
 </ul>
 
-<p class="notice--warning"><strong>QUESTION</strong><br /><br />
-Q. 보조기억장치도 컴퓨터 외부에 연결되어 있으면서 내부와 정보를 교환하는데, 그렇다면 보조기억장치도 입출력장치라고 할 수 있지 않나요?<br />
+<p class="notice--warning"><strong>QUESTION</strong><br><br>
+Q. 보조기억장치도 컴퓨터 외부에 연결되어 있으면서 내부와 정보를 교환하는데, 그렇다면 보조기억장치도 입출력장치라고 할 수 있지 않나요?<br>
 A. 보조기억장치와 입출력장치를 ‘컴퓨터 주변에 붙여있는 장치’라는 의미에서 주변장치라 통칭하기도 한다. “보조기억장치는 입출력장치에 비해 메모리를 보조하는 역할을 수행한다.”정도로 이해하자!</p>
 
 <h4 id="단위">단위</h4>
@@ -601,7 +650,7 @@ A. 보조기억장치와 입출력장치를 ‘컴퓨터 주변에 붙여있는 
 </ul>
 
 <h3 id="소프트웨어">소프트웨어</h3>
-<hr />
+<hr>
 <p>컴퓨터 하드웨어가 작동하도록 명령을 내리는 프로그램과 데이터의 집합이다. 쉽게 말해서 컴퓨터를 움직이게 하는 설계도이자 명령어이다.</p>
 
 <h4 id="시스템-소프트웨어-system-software">시스템 소프트웨어 (System Software)</h4>
@@ -632,16 +681,18 @@ A. 보조기억장치와 입출력장치를 ‘컴퓨터 주변에 붙여있는 
 </ul>
 
 <h3 id="펌웨어">펌웨어</h3>
-<hr />
+<hr>
 <p>하드웨어의 동작을 제어하는 소프트웨어로, 하드웨어 내부에 내장되어 있다. 소프트웨어와 하드웨어의 <strong>중간 역할</strong>을 수행하여 <strong>하드웨어와 소프트웨어가 원활하게 동작</strong>할 수 있도록 돕는다. 하드웨어 <strong>초기화, 제어, 보안 강화</strong> 등의 기능을 담당하며, <strong>플래시 메모리</strong>에 저장되어 업데이트를 통해 기능을 개선할 수 있다.</p>
 
 <ul>
-  <li><strong>스마트폰 펌웨어</strong>
+  <li>
+<strong>스마트폰 펌웨어</strong>
     <ul>
       <li>카메라, 센서, 배터리 등 <strong>하드웨어 장치를 제어</strong>하고 운영체제와 연동한다.</li>
     </ul>
   </li>
-  <li><strong>가전 제품</strong>
+  <li>
+<strong>가전 제품</strong>
     <ul>
       <li>TV, 세탁기, 전자레인지 등에서는 펌웨어가 <strong>기능을 제어</strong>하고 <strong>UI 화면</strong>을 표시한다.</li>
     </ul>
@@ -723,6 +774,10 @@ A. 보조기억장치와 입출력장치를 ‘컴퓨터 주변에 붙여있는 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
+      <div class="archive__item-teaser">
+        <img src="/assets/images/post/ca-01-1.png" alt="">
+      </div>
+    
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/cs/os/process-thread/" rel="permalink">[운영체제] 1.운영체제
@@ -736,7 +791,6 @@ A. 보조기억장치와 입출력장치를 ‘컴퓨터 주변에 붙여있는 
 </p>
   </article>
 </div>
-
     
       
       
@@ -759,7 +813,6 @@ A. 보조기억장치와 입출력장치를 ‘컴퓨터 주변에 붙여있는 
 </p>
   </article>
 </div>
-
     
   </div>
 </div>
@@ -768,10 +821,23 @@ A. 보조기억장치와 입출력장치를 ‘컴퓨터 주변에 붙여있는 
   
 </div>
 
-      
     </div>
 
     
+
+    <!--사이드바 위, 아래, 홈버튼 기능 추가-->
+    <!-- <aside class="sidebar__top">
+      <a href="#site-nav"> <i class="fas fa-angle-double-up fa-2x"></i> </a>
+    </aside>
+
+    <aside class="sidebar__bottom">
+      <a href="#footer"> <i class="fa fa-angle-double-down fa-2x"></i> </a>
+    </aside> -->
+
+    <!-- 라이트모드 토글 추가 -->
+    <!-- <aside class= "dark__toggle">
+      
+    </aside> -->
 
     <div id="footer" class="page__footer">
       <footer>
@@ -808,13 +874,14 @@ A. 보조기억장치와 입출력장치를 ‘컴퓨터 주변에 붙여있는 
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">Yundal</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2024 <a href="http://localhost:4000">Yundal</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
   <script src="/assets/js/main.min.js"></script>
+
 
 
 

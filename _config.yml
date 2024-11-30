@@ -115,7 +115,9 @@ analytics:
 author:
   name             : "Yundal"
   avatar           : "/assets/images/waves.jpeg"
-  bio              : "파란색과 바다를 좋아하는 개발자 꿈나무 입니다. 🌊"
+  bio: |
+    파란색 좋아하는
+    프론트엔드 개발자 꿈나무 💭
   location         : "Republic of Korea"
   email            : "susu12356@gmail.com"
   links:

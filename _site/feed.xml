@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-27T20:52:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yundal</title><subtitle>This is my amazing blog:)</subtitle><author><name>Yundal</name><email>susu12356@gmail.com</email></author><entry><title type="html">[운영체제] 1.운영체제</title><link href="http://localhost:4000/cs/os/process-thread/" rel="alternate" type="text/html" title="[운영체제] 1.운영체제" /><published>2024-10-24T00:00:00+09:00</published><updated>2024-10-24T00:00:00+09:00</updated><id>http://localhost:4000/cs/os/process-thread</id><content type="html" xml:base="http://localhost:4000/cs/os/process-thread/"><![CDATA[<h3 id="프로세스">프로세스</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-30T18:58:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yundal</title><subtitle>This is my amazing blog:)</subtitle><author><name>Yundal</name><email>susu12356@gmail.com</email></author><entry><title type="html">[운영체제] 1.운영체제</title><link href="http://localhost:4000/cs/os/process-thread/" rel="alternate" type="text/html" title="[운영체제] 1.운영체제" /><published>2024-10-24T00:00:00+09:00</published><updated>2024-10-24T00:00:00+09:00</updated><id>http://localhost:4000/cs/os/process-thread</id><content type="html" xml:base="http://localhost:4000/cs/os/process-thread/"><![CDATA[<h3 id="프로세스">프로세스</h3>
 
 <p>: 메모리에 적재되어 실행중인 프로그램(일, task)이다.</p>
 
@@ -112,7 +112,7 @@
   <li>외관과 용도 막론하고 컴퓨터를 이루는 핵심 부품은 크게 다르지 않다. 주로 CPU, 기억장치, 주변장치(CPU와 메모리를 제외한 나머지)로 구성된다. 각 구성요소들은 시스템 버스로 연결되어 있으며, 하드웨터의 품질은 컴퓨터의 정보 처리 능력을 결정한다.</li>
 </ul>
 
-<p><img src="/assets/images/ca-01-1.png" alt="ca-01-1" /></p>
+<p><img src="/assets/images/post/ca-01-1.png" alt="ca-01-1" /></p>
 
 <h4 id="하드웨어-구성요소">하드웨어 구성요소</h4>
 <hr />
@@ -220,7 +220,7 @@
   <li>
     <p>CPU 내부 버스</p>
 
-    <p><img src="/assets/images/ca-01-2.png" alt="ca-01-2" /></p>
+    <p><img src="/assets/images/post/ca-01-2.png" alt="ca-01-2" /></p>
 
     <p>CPU 내부에서 데이터를 주고 받는 연결통로이다. 즉, CPU 내부의 여러 부품들이 서로 <strong>소통</strong>할 수 있게 해주는 고속 통신로이다. 실제로는 여러 개의 전성 또는 회로로 이루어져있다. 버스가 얼마나 빠르게 데이터를 전달할 수 있느냐에 따라 CPU 처리속도가 결정된다.</p>
 

@@ -1,6 +1,16 @@
 ---
-layout: home
+layout: archive
 author_profile: true
+entries_layout: grid
+header:
+    overlay_image: /assets/images/main/blogIntro.svg
 sidebar:
     nav: "sidebar-category"
 ---
+
+<div class="grid__wrapper">
+    {% for post in paginator.posts %}
+    {% include archive-single.html type="grid" %}
+    {% endfor %}
+</div>
+    {% include paginator.html %} 

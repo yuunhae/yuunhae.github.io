@@ -4,7 +4,9 @@ excerpt: "GitHub Blog를 만들어보았다."
 toc: true
 toc_label: "index"
 toc_sticky: true
-tag:
+date: 24-10-14
+header:
+    teaser: "/assets/images/main/blogIntro.svg"
 comments: true
 ---
 
@@ -22,7 +24,7 @@ comments: true
 
 - 외관과 용도 막론하고 컴퓨터를 이루는 핵심 부품은 크게 다르지 않다. 주로 CPU, 기억장치, 주변장치(CPU와 메모리를 제외한 나머지)로 구성된다. 각 구성요소들은 시스템 버스로 연결되어 있으며, 하드웨터의 품질은 컴퓨터의 정보 처리 능력을 결정한다.
 
-![ca-01-1](/assets/images/ca-01-1.png)
+![ca-01-1](/assets/images/post/ca-01-1.png)
 
 #### 하드웨어 구성요소
 ---
@@ -91,7 +93,7 @@ comments: true
         
 - CPU 내부 버스
     
-    ![ca-01-2](/assets/images/ca-01-2.png)
+    ![ca-01-2](/assets/images/post/ca-01-2.png)
     
     CPU 내부에서 데이터를 주고 받는 연결통로이다. 즉, CPU 내부의 여러 부품들이 서로 **소통**할 수 있게 해주는 고속 통신로이다. 실제로는 여러 개의 전성 또는 회로로 이루어져있다. 버스가 얼마나 빠르게 데이터를 전달할 수 있느냐에 따라 CPU 처리속도가 결정된다. 
     

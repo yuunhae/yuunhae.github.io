@@ -7,6 +7,8 @@ toc_sticky: true
 tag:
 comments: true
 last-modified: 2024-10-26
+header:
+    teaser: /assets/images/post/ca-01-1.png
 ---
 ### 프로세스
 
