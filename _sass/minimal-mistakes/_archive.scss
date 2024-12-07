@@ -37,6 +37,13 @@
   &:hover img {
     transform: scale(1.02);
   }
+
+  p{
+    font-size: 11px;
+  }
+
+
+
 }
 
 //홈 화면 "최근 포스트" font 
@@ -50,13 +57,12 @@
   +.list__item .archive__item-title {
     margin-top: 0.5em;
   }
-
-
 }
 
 //홈페이지 작성 글 제목들
 .archive__item-title {
-  margin-bottom: 0.25em;
+  white-space: nowrap;
+  font-size: 1.2em; 
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;
@@ -79,6 +85,8 @@
   a+a {
     opacity: 0.5;
   }
+
+
 }
 
 /* remove border*/
@@ -101,18 +109,28 @@
   color: #000;
 }
 
+
+
 .archive__item-excerpt {
-  margin-top: 0;
-  font-size: 0.8em; //$type-size-6;
-  // font-family: $myfont_a1;
+  display: block;
+  height: 1.8em; /* 부제목 칸 높이 고정 (1~2줄 제한) */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* 한 줄로 제한 */
+  font-size: 1em; /* 부제목 폰트 크기 */
+  color: #555; /* 부제목 색상 */
 
-
-  &+p {
-    text-indent: 0;
-  }
+  // &+p {
+  //   text-indent: 0;
+  //   font-size: 1.2em;
+  // }
 
   a {
     position: relative;
+  }
+
+  p{
+    font-size: 10px;
   }
 }
 
@@ -281,7 +299,7 @@
   margin-bottom: 2em;
   transition: all 0.2s linear; //hover 시간 조정
   backdrop-filter: blur(10px);
-  height: 100%;
+  height: 250px;
   padding: 3px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -289,9 +307,9 @@
   margin: 10px 0px;
 
   &:hover {
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid #151D6A;
     cursor: pointer;
-    transition: border 0.3s ease;
+    transition: border 0.4s ease;
   }
 
 
@@ -319,8 +337,9 @@
 
     min-height: 12em; //추가
 
-    &:nth-child(2n + 1) {
+    &:nth-child(3n + 1) {
       clear: none;
+      margin-inline-start: 0; // 앞쪽 여백 제거
     }
 
     &:nth-child(3n + 1) {

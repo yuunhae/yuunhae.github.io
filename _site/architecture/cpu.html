@@ -9,30 +9,34 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Yundal</title>
-<meta name="description" content="This is my amazing blog:)">
+<!-- begin _includes/seo.html --><title>[컴퓨터구조] 2.CPU 동작원리 - Yundal</title>
+<meta name="description" content="CPU란?">
 
 
   <meta name="author" content="Yundal">
   
+  <meta property="article:author" content="Yundal">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Yundal">
-<meta property="og:title" content="Yundal">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="[컴퓨터구조] 2.CPU 동작원리">
+<meta property="og:url" content="http://localhost:4000/architecture/cpu">
 
 
-  <meta property="og:description" content="This is my amazing blog:)">
-
-
-
-  <meta property="og:image" content="http://localhost:4000/assets/images/main/blogIntro.svg">
+  <meta property="og:description" content="CPU란?">
 
 
 
+  <meta property="og:image" content="http://localhost:4000/assets/images/post/ar-02-1.jpeg">
 
+
+
+
+
+  <meta property="article:published_time" content="2024-08-08T00:00:00+09:00">
 
 
 
@@ -43,20 +47,10 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/architecture/cpu">
 
 
 
-
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-    "name": "Yundal",
-    "url": "http://localhost:4000/"
-}
-</script>
 
 
 
@@ -109,7 +103,7 @@
 
   </head>
 
-  <body class="layout--archive">
+  <body class="layout--single">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -154,32 +148,6 @@
 
     <div class="initial-content">
       
-  
-
-
-
-
-
-
-
-<div class="page__hero--overlay" style=" background-image: url('/assets/images/main/blogIntro.svg');">
-  
-    <div class="wrapper">
-      <!-- <h1 id="page-title" class="page__title" itemprop="headline">
-        
-          Yundal
-
-        
-      </h1> -->
-      
-      
-
-
-      
-    </div>
-  
-  
-</div>
 
 
 
@@ -341,11 +309,219 @@
 
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[컴퓨터구조] 2.CPU 동작원리">
+    <meta itemprop="description" content="CPU란?">
+    <meta itemprop="datePublished" content="2024-08-08T00:00:00+09:00">
     
-    <div class="grid__wrapper">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/architecture/cpu" itemprop="url">[컴퓨터구조] 2.CPU 동작원리
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> index</h4></header>
+              <ul class="toc__menu">
+<li><a href="#cpu%EB%9E%80">CPU란?</a></li>
+<li><a href="#cpu-%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C">CPU 구성요소</a></li>
+<li><a href="#cpu-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC">CPU 동작 원리</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h3 id="cpu란">CPU란?</h3>
+
+<p>CPU는 컴퓨터(서버)의 핵심 계산 장치이다. 컴퓨터 및 기타 스마트 장치는 데이터를 디지털 신호로 변환하고 이에 대한 수학적 연산을 수행한다. CPU는 이러한 신호를 처리하고 컴퓨팅을 가능하게 하며, 모든 컴퓨팅 장치의 두뇌 역할을 한다. 또한 운영체제 및 애플리케이션을 실행하는 데 필요한 모든 컴퓨팅 작업을 처리한다.</p>
+
+<h3 id="cpu-구성요소">CPU 구성요소</h3>
+
+<hr>
+
+<p>🔽 가삼컴퓨터 AccCom의 CPU 구성</p>
+
+<p><img src="../../assets/images/post/ar-02-1.jpeg" alt="ar-02-1.jpeg" style="width:500px;"><br></p>
+
+<ol>
+  <li>
+    <p>제어장치 ⇒ 명령어를 해석한 결과에 따라 약속된 제어신호를 만들어 낸다.<br>
+<strong>PC</strong>(Program Counter) 레지스터 : 다음 번에 실행할 명령어 주소 보관<br>
+<strong>IR</strong>(Instruction Register)레지스터 : 현재 실행 중인 명령어 보관</p>
+  </li>
+  <li>
+    <p>연산장치 (ALU)<br>
+<strong>ACC</strong>(Accumulator): 누산기 ⇒ 연산결과를 임시저장</p>
+  </li>
+  <li>
+    <p>메모리 인터페이스<br>
+<strong>MAR(Memory Address Register)</strong> : 메모리에 엑세스 할 때, 필요한 주소를 적는 곳<br>
+<strong>MBR(Memory Buffer Register)</strong> : 메모리에 읽거나 쓰려는 데이터 혹은 명령을 일시적으로 보관하는 곳<br>
+ ⇒ 아키텍쳐에 따라서 생략 가능</p>
+  </li>
+</ol>
+
+<p><br></p>
+
+<blockquote>
+  <p>구성요소에 자세한 대한 정리는 <a href="https://www.notion.so/2bed00a4568e46bd830bdb4bcad8bb37?pvs=21">[컴퓨터의 구성]</a></p>
+</blockquote>
+
+<h3 id="cpu-동작-원리">CPU 동작 원리</h3>
+
+<hr>
+
+<p>CPU는 다른 하드웨어 구성요소 및 소프트웨어 프로그램과 함께 동작하여 데이터를 처리하고 여러 장치 내의 정보 흐름을 관리한다. 어떻게 관리할까? 간단하게 말하자면, CPU는 메모리에서 명령어를 가져와서 필요한 작업을 수행하고 출력을 다시 메모리로 보낸다. 자세한 명령어 처리과정은 다음과 같다:</p>
+
+<dl>
+  <dt><strong>명령어 처리 과정</strong></dt>
+  <dd>
+    <p>CPU는 명령어를 처리할 때, 명령어를 읽어오는 인출 사이클과 명령어를 실행하는 실행 사이클을 반복한다.</p>
+  </dd>
+</dl>
+
+<ol>
+  <li>
+    <p><strong>인출 사이클(Instruction Fetch Cycle, Fetch Cycle)</strong></p>
+
+    <p>: 실행할 명령어를 메모리에서 읽어 CPU로 가져오는 단계이다. 명령어는 CPU에 대한 특정 작업 또는 운영을 나타내는 이진 코드이다.</p>
+
+    <ol>
+      <li>
+        <p><strong>PC 값 읽기</strong></p>
+
+        <p>PC에 저장된 명령어의 메모리 주소를 MAR로 보낸다. 현재 PC는 실행해야 할 명령어의 주소르르 가리키고 있다.</p>
+      </li>
+      <li>
+        <p><strong>MAT → 메모리 요청</strong></p>
+
+        <p>MAR이 메모리에게 주소를 알려준다.</p>
+      </li>
+      <li><strong>제어신호가 메모리에게 읽기 신호(Read Signal)를 보낸다.</strong></li>
+      <li>
+        <p><strong>메모리 데이터 전송</strong></p>
+
+        <p>메모리는 요청된 주소에 있는 데이터(=명령어)를 읽고,  데이터 버스를 통해  MBR에 저장한다.</p>
+      </li>
+      <li>
+        <p><strong>MBR → IR저장</strong></p>
+
+        <p>MBR에 저장된 명령어를 IR로 복사하여 저장한다.</p>
+      </li>
+      <li>
+<strong>PC 값을 갱신하여 다음 명령어 주소로 갱신한다.</strong> 예) PC = PC + 2
+<br>
+<br>
+</li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>실행 사이클(Execution Cycle)</strong> : IR에 저장된 명령어를 실행하는 단계이다. 명령어에 따라서 실행 과정이 다르다. 아래는 [LDA 310]를 실행하는 흐름이다. 해당 명령어는 주소 310의 데이터를 로드하라는 명령이다.</p>
+    <ol>
+      <li>
+        <p><strong>IR해석</strong></p>
+
+        <p>IR에 저장된 명령어[LDA 310]를 해석한다.</p>
+      </li>
+      <li>
+        <p><strong>MAR 갱신</strong></p>
+
+        <p>명령어에 포함되어 있는 메모리주소(310)를 MAR에 저장(지정)한다.</p>
+      </li>
+      <li><strong>제어신호가 읽기 신호 보낸다.</strong></li>
+      <li>
+        <p><strong>데이터 로드</strong></p>
+
+        <p>메모리는 해당 주소의 데이터를 읽어 MBR에 저장한다.</p>
+      </li>
+      <li><strong>ACC 저장</strong></li>
+      <li>
+<strong>MBR에 저장한 데이터를 누산기(ACC)에 저장</strong>한다. 해당 데이터는 이후 연산이나 결과 처리를 위해 데이터를 활용할 수 있다.</li>
+    </ol>
+  </li>
+</ol>
+
+<blockquote>
+  <p>참조 https://aws.amazon.com/ko/what-is/cpu/</p>
+</blockquote>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#architecture" class="page__taxonomy-item p-category" rel="tag">architecture</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2024-08-08T00:00:00+09:00">August 8, 2024</time></p>
+
+      </footer>
+
+      <!-- <section class="page__share">
+  <h4 class="page__share-title">공유하기</h4>
+
+  <a href="https://twitter.com/intent/tweet?text=%5B%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0%5D+2.CPU+%EB%8F%99%EC%9E%91%EC%9B%90%EB%A6%AC%20http%3A%2F%2Flocalhost%3A4000%2Farchitecture%2Fcpu" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Farchitecture%2Fcpu" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/architecture/cpu" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section> -->
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">이전</a>
     
     
+      <a href="/architecture/cache" class="pagination--pager" title="[컴퓨터구조] 3. 캐시 메모리(Cache Memory)
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">참고</h2>
+  <div class="grid__wrapper">
+    
+      
+      
 
 
 
@@ -372,7 +548,8 @@
   </article>
 </div>
     
-    
+      
+      
 
 
 
@@ -398,7 +575,8 @@
   </article>
 </div>
     
-    
+      
+      
 
 
 
@@ -424,7 +602,8 @@
   </article>
 </div>
     
-    
+      
+      
 
 
 
@@ -451,37 +630,11 @@
   </article>
 </div>
     
-    
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/post/ar-02-1.jpeg" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/architecture/cpu" rel="permalink">[컴퓨터구조] 2.CPU 동작원리
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">CPU란?
-
-</p>
-    <p class="artchive__date">2024-08-08</p>
-  </article>
-</div>
-    
-</div>
-    
- 
   </div>
+</div>
+
+  
+  
 </div>
 
     </div>

@@ -1,7 +1,7 @@
 # main links
 main:
   - title: "Home"
-    url: https://yuunhae.github.io
+    url: /
 
   - title: "About Me"
     url: /about/
@@ -10,19 +10,19 @@ main:
     url: /posts/
 
 
-sidebar-category:
-  - title: "CS"
-    children:
-      - title: "컴퓨터 구조"
-        url: "cs/architecture/"
-      - title: "운영체제"
-        url: "cs/operating-system/"
-      - title: "컴퓨터 네트워크"
-        url: "cs/network/"
-      - title: "데이터테이스"
-        url: "cs/database/"
+# sidebar-category:
+#   - title: "CS"
+#     children:
+#       - title: "컴퓨터 구조"
+#         url: "computer-science/architecture/"
+#       - title: "운영체제"
+#         url: "computer-science/operating-system/"
+#       - title: "컴퓨터 네트워크"
+#         url: "computer-science/network/"
+#       - title: "데이터테이스"
+#         url: "computer-science/database/"
 
-  - title: "Github blog"
-    children:
-      - title: "로그"
-        url: "github-blog/log/"
+#   - title: "Github blog"
+#     children:
+#       - title: "로그"
+#         url: "github-blog/log/"
