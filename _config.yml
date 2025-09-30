@@ -22,9 +22,9 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Yundal"
 description              : "This is my amazing blog:)"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://yuunhae.github.io" # the base hostname & protocol for your site
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "yuunhae/yuunhae.github.io" # GitHub username/repo-name
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Yundal"
   avatar           : "/assets/images/waves.jpeg"
-  bio              : 프론트엔드 개발자 꿈나무
+  # bio              : 프론트엔드 개발자 꿈나무
   # location         : "Republic of Korea"
   email            : "susu12356@gmail.com"
   links:
