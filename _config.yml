@@ -117,25 +117,25 @@ author:
   avatar           : "/assets/images/waves.jpeg"
   # bio              : 프론트엔드 개발자 꿈나무
   # location         : "Republic of Korea"
-  email            : "susu12356@gmail.com"
+  email            : "choyunhae829@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:susu12356@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://yuunhae.github.io/"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:susu12356@email.com"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
+    #   url: "https://yuunhae.github.io/"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   # url: "https://twitter.com/"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yuunhae"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
 # Site Footer
@@ -334,3 +334,14 @@ defaults:
       show_date: false
       sidebar:
         nav: "sidebar-category"
+      classes: wide
+
+
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      classes: wide  # 페이지도 넓게
