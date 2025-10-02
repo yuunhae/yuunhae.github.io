@@ -12,3 +12,25 @@ body {
     font-size: 0.8em; // 본문 글자 크기 조정
 
 }
+
+.notice {
+  font-size: 16px !important; // 기본 글씨 크기와 동일하게
+  line-height: 1.6;
+  
+  // 특정 notice 타입별로 조정
+  &--info {
+    font-size: 16px !important;
+  }
+  
+  &--warning {
+    font-size: 16px !important;
+  }
+  
+  &--success {
+    font-size: 16px !important;
+  }
+  
+  &--danger {
+    font-size: 16px !important;
+  }
+}
