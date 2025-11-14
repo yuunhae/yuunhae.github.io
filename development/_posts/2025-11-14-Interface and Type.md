@@ -1,5 +1,5 @@
 ---
-title:  "[Development] TypeScript Interface vs Type"
+title:  "[TypeScript] Interface vs Type"
 excerpt: "TypeScript의 interface와 type 키워드 비교 분석 및 파일 크기 최적화 방법"
 toc: true
 toc_label: "index"
@@ -8,7 +8,7 @@ date: 2025-11-14
 comments: true
 classes: wide
 header:
-    teaser: ../../assets/images/development/dev_01_1.png
+    teaser: ../../assets/images/development/dev_02_1.png
 ---
 
 ### 들어가기전
@@ -99,7 +99,7 @@ const john : Employee = {
 Interface는 클래스와 닮아있어서 extends 키워드를 사용해서 타입을 확장할 수 있다. 마찬가지로 상속받은 타입을 모두 명시하지 않으면 아래와 같은 에러가 발생한다.<br/>
 `Type '{ role: string; }' is missing the following properties from type 'Employee': name, phoneNumberts(2739)` <br/>
 
-### interface로 파일 크기 줄이기
+### interface 최적화
 
 ---
 
@@ -107,10 +107,10 @@ Interface는 클래스와 닮아있어서 extends 키워드를 사용해서 타�
 
 <div style="display: flex; gap: 10px; margin: 20px 0;">
   <div style="flex: 1;">
-     <img width: 100%; height: auto; alt="image" src="https://github.com/user-attachments/assets/a7ce76cb-3049-462e-a0b9-4d1687e9a46d">
+     <img  width="100%" height="auto" style="border-radius: 10px" alt="dev_02_1" src="../../assets/images/development/dev_02_1.png">
   </div>
   <div style="flex: 1;">
-    <img width: 100%; height: auto; alt="image" src="https://github.com/user-attachments/assets/0a0e58aa-0d47-42dd-afec-5ccf695f9603">
+    <img  width="100%" height="auto" style="border-radius: 10px" alt="dev_02_2" src="../../assets/images/development/dev_02_2.png" />
   </div>
 </div>
 
@@ -134,13 +134,13 @@ class Admin extends Person {
 ```
 
 Person 추상화 클래스를 상속받은 Admin 클래스는 Person 클래스에 명시된 getFullName 메소드를 구현해야 하는 의무를 가진다. 이 때, 이 모든 코드는 자바스크립트로 컴파일 된다. <br/><br/>
-<img width="1949" height="603" alt="image" src="https://github.com/user-attachments/assets/4e809bde-7b3a-4f07-828f-4f23f2f1acd5" />
+<img  width="80%" height="auto"  style="border-radius: 10px"alt="dev_02_3" src="../../assets/images/development/dev_02_3.png" />
 <br/><br/>
 하지만 이 역할을 interface와 implements라는 키워드를 통해서 구현 가능하다.  
 
 ```typescript
 interface Person {
-    firstName : string;
+    firstName : string; 
     lastName: string;
     getFullName() :string 
 }
@@ -156,7 +156,7 @@ class Admin implements Person {
 }
 ```
 `abstract` 키워드를 사용하지 않고 `implements`를 사용한다면 JavaScript로 컴파일될 때 interface 부분은 제거되어 파일 크기가 줄어든다. <br/><br/>
-<img width="1827" height="670" alt="image" src="https://github.com/user-attachments/assets/5b01a9ad-aab5-455d-8a63-784f5013a7b7" />
+<img  width="80%" height="auto"  style="border-radius: 10px"alt="dev_02_4" src="../../assets/images/development/dev_02_4.png" />
 <br/><br/>
 사진에서 보이는 것처럼 interface 키워드를 사용한 코드를 자바 스크립트로 컴파일 되지 않는다. 
 
